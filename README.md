@@ -23,6 +23,7 @@ We have inputs called blocks which contain software classes. By running this pro
 ## Credits:
 With a special thanks to X/Y/Z, this project was done by @X, @Y and @Z.
 
-## License: Open to all.
+## License:
+Open to all.
 
 
