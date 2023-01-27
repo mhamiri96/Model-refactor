@@ -21,7 +21,7 @@ Sometimes refactoring can be a nightmare for running softwares. Even worse if it
 We have inputs called blocks which contain software classes. By running this project on them, and set starting parameters(such as metrics factors, numbers of generation, etc.) you can find candidate solutions and get final best solutions created by NSGA-II. 
 
 ## Credits:
-With a special thanks to X/Y/Z, this project was done by @X, @Y and @Z.
+With a special thanks to X/Y/Z, this project was done by @mhamiri96 , @masoudrabiee and @mhshahbazi
 
 ## License:
 Open to all.
