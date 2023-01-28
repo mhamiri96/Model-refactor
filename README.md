@@ -1,5 +1,5 @@
 
-![Generic badge](https://img.shields.io/badge/Language-JAVA-red.svg) ![Generic badge](https://img.shields.io/badge/Status-UP-green.svg) ![Generic badge](https://img.shields.io/badge/TeamMembers-3-blue.svg)
+![Generic badge](https://img.shields.io/badge/Language-JAVA-red.svg) ![Generic badge](https://img.shields.io/badge/Status-UP-green.svg) ![Generic badge](https://img.shields.io/badge/TeamMembers-3-blue.svg) ![Generic badge](https://img.shields.io/badge/CommitsCount-30-yellow.svg)
 
 # Model Refactor
 ## What is this project?
