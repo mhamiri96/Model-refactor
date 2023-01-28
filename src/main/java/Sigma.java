@@ -1,13 +1,3 @@
-/*
- * To change this template, choose Tools | Templates
- * and open the template in the editor.
- */
-
-
-/**
- *
- * @author MWM
- */
 public class Sigma 
 {
     double user_value;
@@ -29,6 +19,7 @@ public class Sigma
         this.current_value = s.current_value ;
     }
     
+    // calculating current value based on current generation and max generation
     void update_sigma(int current_generation, int max_generations)
     {
         current_value = 1 - current_generation*((1-user_value)/max_generations);
