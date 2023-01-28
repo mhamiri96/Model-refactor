@@ -960,7 +960,7 @@ public class ApplyRefactoring
 		Vector bloc=new Vector();
 		try
 		  {
-		      lecture=new BufferedReader(new FileReader("GanttProject.blocks"));
+		      lecture=new BufferedReader(new FileReader("GanttProjectTemp.blocks"));
 		      	      
 		      String ch;
 		      String b="";

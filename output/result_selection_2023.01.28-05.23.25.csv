@@ -1,0 +1,8 @@
+Coupling,Cohesion,Complxity,Sability,Standard Deviation,Encapsulation,Interfacing,Average Of Parameters Methods,Average Of Number of Edges,Average Of Number of Actions,Average Of Locality
+1.0,0.2890629720346347,0.6191997177763114,0.0,0.5258640562969956,1.0,1.0,0.7142857142857143,0.7142857142857157,0.7142857142857113,NaN
+show applied refactoring
+pushDownAttribute,pullUpMethod,pushDownMethod,addRelationShip,deleteRelationShip,pushDownAttribute,moveMethod,moveAttribute,pullUpAttribute,addRelationShip,moveParameter,deleteRelationShip,addRelationShip,moveAttribute,pushDownMethod,
+1.0,0.2890629720346347,0.6191997177763114,0.0,0.5258640562969956,1.0,1.0,0.7142857142857143,0.7142857142857157,0.7142857142857113,NaN
+show applied refactoring
+pushDownAttribute,pullUpMethod,pushDownMethod,addRelationShip,deleteRelationShip,pushDownAttribute,moveMethod,moveAttribute,pullUpAttribute,addRelationShip,moveParameter,deleteRelationShip,addRelationShip,moveAttribute,pushDownMethod,
+0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5
