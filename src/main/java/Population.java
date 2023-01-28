@@ -425,7 +425,15 @@ public class Population {
                         writer.append('\n');
                     else
                         writer.append(',');
-                }   
+                }
+                // show applied refactoring in selected solution :
+                writer.append("show applied refactoring");
+                writer.append('\n');
+                for (int k=0;k<selection.selection.get(i).refectorings.size();k++){
+                    writer.append(Refactorings.getRefactoring(selection.selection.get(i).refectorings.get(k)));
+                    writer.append(',');
+                }
+                writer.append('\n');
             }
             
             for(int i=0;i<ref.objectives.length;i++){
