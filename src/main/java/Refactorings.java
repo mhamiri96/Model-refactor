@@ -101,6 +101,59 @@ public class Refactorings
 		}
 		return 0;
 	}
+
+	public static String getRefactoring(int num)
+	{
+		if(num==0)
+		{
+			return  "addGeneralisation";
+		}
+		if(num==1)
+		{
+			return  "deleteGeneralisation";
+		}
+		if(num==2)
+		{
+			return  "addRelationShip";
+		}
+		if(num==3)
+		{
+			return  "deleteRelationShip";
+		}
+		if(num==4)
+		{
+			return  "moveAttribute";
+		}
+		if(num==5)
+		{
+			return  "moveParameter";
+		}
+		if(num==6)
+		{
+			return  "moveMethod";
+		}
+		if(num==7)
+		{
+			return  "extractClass";
+		}
+		if(num==8)
+		{
+			return  "pullUpAttribute";
+		}
+		if(num==9)
+		{
+			return "pullUpMethod";
+		}
+		if(num==10)
+		{
+			return  "pushDownAttribute";
+		}
+		if(num==11)
+		{
+			return  "pushDownMethod";
+		}
+		return "failed to get refactoring!";
+	}
 	
 	public static int addGeneralisation()
 	{
