@@ -4,6 +4,7 @@
 # Model Refactor
 ## What is this project?
   Model Refactor is an academic project which tries to do refactoring on a real project on two major design criterias (Class diagram and Activity diagram) using NSGA-II. It is worth mentioning that NSGA-II is an algorithm based on Genetic algorithm and is used extensively for multi-objective optimization problems.
+  The source article can be read from [here](https://www.researchgate.net/publication/282538487_Multi-view_refactoring_of_class_and_activity_diagrams_using_a_multi-objective_evolutionary_algorithm) or download it from [here](https://github.com/mhamiri96/Model-refactor/raw/main/2015_Multi-view%20refactoring%20of%20class%20and%20activity%20diagrams%20using%20a%20multi-objective%20evolutionary%20algorithm.pdf). 
   
 ## What was our motivation? 
 Honestly it was a mandatory project of "Software Architecture" course of graduated students of Iran University of Sceince and Technology (IUST) which instructed by Dr. Mehrdad Ashtiani, but we can say that it was interesting enough to concentrate and worth it to spend considerable amount of time on it.
