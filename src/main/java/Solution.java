@@ -290,6 +290,21 @@ public class Solution
             bloc1 = new String(bloc);
             
             String className = Info.getClassName(bloc);
+
+            // compute metrics of activity diagram for solution
+            int numOfMethods = Info.getNbrMethods(className);
+            String[] methods = Info.getMethodslist(className);
+            for (int k = 0; k < methods.length; k++) {
+                int local_NP = ActivityMetric.NP(className, methods[k]);
+                int local_NED = ActivityMetric.NED(className, methods[k]);
+                int local_NAC = ActivityMetric.NAC(className, methods[k]);
+                double local_LO = ActivityMetric.LO(className, methods[k]);
+                NP += local_NP;
+                NED += local_NED;
+                NAC += local_NAC;
+                LO += local_LO;
+            }
+            numOfAllMethods += numOfMethods;
             
             number[i] = Metric.NOM(className);
             public_attributes[i] = Info.getNbrPublicAttributes(className);
@@ -354,7 +369,14 @@ public class Solution
 	}
 	coupling = (double) coupling/nbClass ;
         cohesion = (double) cohesion/nbClass ;
-        
+
+        // set average of activity diagram metrics :
+        NP /= numOfAllMethods;
+        NED /= numOfAllMethods;
+        NAC /= numOfAllMethods;
+        LO /= numOfAllMethods;
+
+        // add metrics of class diagram to objectives list
         if (coupling_metric)
         {
             objectives.add(coupling);
@@ -396,6 +418,27 @@ public class Solution
             // interface per classes ratio to be maximized so the inverse will be considered to have all objectives minimized
             objectives.add((double)((nbInterface/nbClass)));
             this.objectives_names.add("Interfacing");
+        }
+
+        // add metrics of activity digram to objectives list
+        if (NP_metric_activity){
+            objectives.add(NP);
+            this.objectives_names.add("Average Of Parameters Methods");
+        }
+
+        if (NED_metric_activity){
+            objectives.add(NED);
+            this.objectives_names.add("Average Of Number of Edges");
+        }
+
+        if (NAC_metric_activity){
+            objectives.add(NAC);
+            this.objectives_names.add("Average Of Number of Actions");
+        }
+
+        if (LO_metric_activity){
+            objectives.add(LO);
+            this.objectives_names.add("Average Of Locality");
         }
         
     }
