@@ -1,8 +1,3 @@
-/**
- * Many-Objective Refactoring
- * @author MWM
- */
-
 import java.io.*;
 import java.text.*;
 import javax.swing.*;
@@ -46,6 +41,12 @@ public class Solution
     static boolean deviance_metric= Execution.deviance_metric;
     static boolean encapsulation_metric= Execution.encapsulation_metric;
     static boolean interfacing_metric= Execution.interfacing_metric;
+
+    // for activity diagram :
+    static boolean NP_metric_activity = Execution.numberOfParameters_metric_activity;
+    static boolean NED_metric_activity = Execution.numberOfEdges_metric_activity;
+    static boolean NAC_metric_activity = Execution.numberOfActions_metric_activity;
+    static boolean LO_metric_activity = Execution.locality_metric_activity;
      
     // Objectives detailed
     double complexity;
@@ -247,6 +248,13 @@ public class Solution
         int local_cohesion = 0 ; // for each class
         double coupling = 0 ; // for all classses
         double cohesion = 0 ;
+
+        // variables for computing activity diagram metrics for each solution
+        int numOfAllMethods = 0;
+        double NP = 0;
+        double NED = 0;
+        double NAC = 0;
+        double LO = 0;
         
         double complexity[] ;
         

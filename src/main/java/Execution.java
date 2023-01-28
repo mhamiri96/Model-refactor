@@ -4,7 +4,7 @@ public class Execution{
     //--- User parameters ---
     // these values represents the chosen reference point and sigma value
     
-    static double aspiration_values[] = {0.5,0.5,0.5,0.5,0.5,0.5,0.5};
+    static double aspiration_values[] = {0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5,0.5};
     static ReferencePoint ref = new ReferencePoint(aspiration_values) ;
     static boolean coupling_metric = true;
     static boolean cohesion_metric= true;
@@ -13,8 +13,13 @@ public class Execution{
     static boolean deviance_metric= true;
     static boolean encapsulation_metric= true;
     static boolean interfacing_metric= true;
+    // add activity diagram metric flags
+    static boolean numberOfParameters_metric_activity = true;
+    static boolean numberOfEdges_metric_activity = true;
+    static boolean numberOfActions_metric_activity = true;
+    static boolean locality_metric_activity = true;
     static Sigma s = new Sigma(1);
-    static int objectives_number = 7 ;
+    static int objectives_number = 11 ;
     static int generations = 50 ;
     static int population_size = 50;
     static int division = 3;
