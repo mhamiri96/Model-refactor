@@ -29,10 +29,10 @@ public class Execution{
         ArrayList<Solution> parents = new ArrayList<Solution>();
         p.create_poplulation();
         for(int i=0; i<generations; i++){
-            p.update_sigma_value(i, generations);
+//            p.update_sigma_value(i, generations);
             parents = p.random_selection();
             p.generate_next_popluation(parents,i);
-            p.print_popluation_metrics(i);
+//            p.print_popluation_metrics(i);
         }
     }
 }
