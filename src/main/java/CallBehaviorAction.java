@@ -6,38 +6,48 @@
 
 // implementation of fUML CallBehaviorAction :
 
+import java.util.Objects;
+
 public class CallBehaviorAction {
 
-    private int numOfEdges ;
-    private int numOfAction ;
+    private int numOfEdges;
+    private int numOfAction;
 
     public String classname;
     public String methodLine;
 
-    CallBehaviorAction(String classname , String methodLine){
+    CallBehaviorAction(String classname, String methodLine) {
         this.classname = classname;
         this.methodLine = methodLine;
         numOfAction = 0;
         numOfEdges = 0;
     }
 
-    public int getEdges(){
-        String []rels = Info.getRelationslist(this.classname);
-        String method = Info.getNameMethod(this.methodLine);
-        for (int i=0;i<rels.length;i++){
-            if (rels[i].split(";")[1] == method){
-                numOfEdges++;
+    public int getEdges() {
+        String[] rels = Info.getRelationslist(this.classname);
+        String[] methods = Info.getMethodslist(this.classname);
+        for (int i = 0; i < methods.length; i++) {
+            String method = Info.getNameMethod(methods[i]);
+            for (int j = 0; j < rels.length; j++) {
+                String temp = rels[j].split(";")[1];
+                if (Objects.equals(temp, method)) {
+                    numOfEdges++;
+                }
             }
         }
         return numOfEdges;
     }
 
-    public int getActions(){
-        String []rels = Info.getRelationslist(this.classname);
-        String method = Info.getNameMethod(this.methodLine);
-        for (int i=0;i<rels.length;i++){
-            if (rels[i].split(";")[1] == method){
-                numOfAction++;
+    public int getActions() {
+        String[] rels = Info.getRelationslist(this.classname);
+        String[] methods = Info.getMethodslist(this.classname);
+        for (int i = 0; i < methods.length; i++) {
+            String method = Info.getNameMethod(methods[i]);
+            for (int j = 0; j < rels.length; j++) {
+                String temp = rels[j].split(";")[1];
+                if (Objects.equals(temp, method)) {
+                    numOfAction++;
+                }
             }
         }
         return numOfAction;

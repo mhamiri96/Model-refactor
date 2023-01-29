@@ -20,7 +20,7 @@ public class Execution{
     static boolean locality_metric_activity = true;
     static Sigma s = new Sigma(1);
     static int objectives_number = 11 ;
-    static int generations = 50 ;
+    static int generations = 3 ;
     static int population_size = 50;
     static int division = 3;
      
